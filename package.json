@@ -1,0 +1,162 @@
+{
+  "name": "next-protect",
+  "description": "Protect your Next.js app with a password. A drop-in solution to keep your deployments protected with a basic password system. Support App Router, Middleware, Edge Runtime, and SSR out of the box.",
+  "version": "0.0.2",
+  "author": "Tim Mikeladze <tim.mikeladze@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "nextjs",
+    "next",
+    "next-protect",
+    "next-password",
+    "next-js-password",
+    "next-password-protect",
+    "nextjs-auth",
+    "nextjs-password-protect",
+    "app-router-password",
+    "app-router-auth",
+    "middleware-auth",
+    "middleware-password",
+    "edge-runtime-auth",
+    "edge-runtime-password",
+    "ssr-auth",
+    "ssr-password"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TimMikeladze/next-protect"
+  },
+  "scripts": {
+    "dev": "concurrently \"pnpm build --watch\"",
+    "build": "tsup",
+    "type-check": "tsc",
+    "lint": "eslint --ignore-path .gitignore \"{src,tests}/**/*.+(ts|js|tsx|jsx)\"",
+    "lint:fix": "pnpm lint --fix && prettier --write .",
+    "test": "pnpm playwright",
+    "test:ci": "pnpm playwright",
+    "playwright": "pnpm exec playwright test",
+    "prepare": "husky",
+    "commit": "cz",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "release": "pnpm build && pnpm release-it",
+    "link:self": "pnpm link --global",
+    "doc": "tsdoc --src=src/server/NextProtect.ts,src/react/NextProtect.tsx,src/react/NextProtectForm.tsx,src/react/useNextProtect.tsx"
+  },
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./server": {
+      "require": "./dist/server/index.js",
+      "import": "./dist/server/index.mjs"
+    },
+    "./react": {
+      "require": "./dist/react/index.js",
+      "import": "./dist/react/index.mjs"
+    },
+    "./styles.css": {
+      "require": "./dist/styles.css",
+      "import": "./dist/styles.css"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "lint-staged": {
+    "./{src,tests}/**/*.{ts,js,jsx,tsx}": [
+      "eslint --ignore-path .gitignore --fix"
+    ],
+    "*": "prettier --write"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/@ryansonshine/cz-conventional-changelog"
+    }
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore(release): v${version}"
+    },
+    "github": {
+      "release": true
+    },
+    "npm": {
+      "publish": false
+    }
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.25.2",
+    "@babel/preset-env": "7.25.3",
+    "@babel/preset-react": "7.24.7",
+    "@babel/preset-typescript": "7.24.7",
+    "@playwright/test": "^1.45.3",
+    "@ryansonshine/commitizen": "4.2.8",
+    "@ryansonshine/cz-conventional-changelog": "3.3.4",
+    "@storybook/addon-essentials": "8.2.7",
+    "@storybook/addon-interactions": "8.2.7",
+    "@storybook/addon-links": "8.2.7",
+    "@storybook/addon-webpack5-compiler-swc": "1.0.5",
+    "@storybook/blocks": "8.2.7",
+    "@storybook/react": "8.2.7",
+    "@storybook/react-webpack5": "8.2.7",
+    "@storybook/test": "8.2.7",
+    "@testing-library/jest-dom": "6.4.8",
+    "@testing-library/react": "16.0.0",
+    "@types/node": "22.0.2",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "@types/react-test-renderer": "18.3.0",
+    "@typescript-eslint/eslint-plugin": "7.14.1",
+    "@typescript-eslint/parser": "7.14.1",
+    "@vitest/coverage-v8": "2.0.5",
+    "babel-loader": "9.1.3",
+    "concurrently": "8.2.2",
+    "dotenv": "^16.4.5",
+    "eslint": "8.57.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-jsx-a11y": "6.9.0",
+    "eslint-plugin-prefer-arrow": "1.2.3",
+    "eslint-plugin-prettier": "5.1.3",
+    "eslint-plugin-react": "7.35.0",
+    "eslint-plugin-react-hooks": "4.6.2",
+    "eslint-plugin-sort-class-members": "1.20.0",
+    "eslint-plugin-storybook": "0.8.0",
+    "eslint-plugin-typescript-sort-keys": "3.2.0",
+    "eslint-plugin-unused-imports": "3.2.0",
+    "husky": "9.1.4",
+    "jsdom": "24.1.1",
+    "lint-staged": "15.2.7",
+    "next": "^14.2.5",
+    "prettier": "3.3.3",
+    "prop-types": "15.8.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-test-renderer": "18.3.1",
+    "release-it": "17.6.0",
+    "storybook": "8.2.7",
+    "ts-node": "10.9.2",
+    "tsconfig-paths": "4.2.0",
+    "tsdoc-markdown": "^0.6.0",
+    "tsup": "8.2.4",
+    "tsx": "4.16.5",
+    "typescript": "5.5.4",
+    "vitest": "2.0.5"
+  },
+  "peerDependencies": {
+    "next": ">=13",
+    "react": ">=17",
+    "react-dom": ">=17"
+  },
+  "resolutions": {},
+  "dependencies": {
+    "jose": "^5.6.3"
+  }
+}

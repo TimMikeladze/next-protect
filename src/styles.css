@@ -1,0 +1,43 @@
+.next-protect-container {
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.next-protect-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 360px;
+}
+
+.next-protect-header {
+}
+
+.next-protect-input-container {
+}
+
+.next-protect-password {
+  font-size: 1.5rem;
+  padding: 0.75rem;
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid gray;
+}
+
+.next-protect-password-error {
+  border: 2px solid red;
+}
+
+.next-protect-submit-button-container {
+}
+
+.next-protect-submit-button {
+  font-size: 1.5rem;
+  padding: 0.75rem;
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid gray;
+}
