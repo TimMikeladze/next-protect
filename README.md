@@ -2,6 +2,8 @@
 
 Protect your Next.js app with a password. A drop-in solution to keep your deployments protected with a basic password system.
 
+> Check-out a [NextJS example](./examples/nextjs-example/) or view the [Demo](https://next-protect.vercel.app/).
+
 ## ✨ Features
 
 - [x] App Router support out of the box.
@@ -9,8 +11,6 @@ Protect your Next.js app with a password. A drop-in solution to keep your deploy
 - [x] Protect just a specific page or the entire app.
 - [x] Use one or more passwords.
 - [x] Customizable form and styles.
-
-> Check-out a [NextJS example](./examples/nextjs-example/) or view the [Demo](https://next-protect.vercel.app/).
 
 ## 📡 Install
 
