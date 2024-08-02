@@ -23,6 +23,10 @@ export const NextProtect = (props: NextProtectProps) => {
     return props.children;
   }
 
+  if (props.disabled) {
+    return props.children;
+  }
+
   if (isProtected === undefined || isProtected === true) {
     return (
       <Suspense>

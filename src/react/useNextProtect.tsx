@@ -14,7 +14,6 @@ export const useNextProtect = (props: NextProtectHookProps) => {
 
   useEffect(() => {
     if (props.disabled) {
-      setIsProtected(false);
       return;
     }
     if (props.isProtected === undefined) {
