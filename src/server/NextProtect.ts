@@ -76,10 +76,14 @@ export class NextProtect {
       if (pathname === this.options.api) {
         return NextResponse.next();
       }
-      return NextResponse.rewrite([origin, this.options.page].join(''));
+      const path = [origin, this.options.page].join('');
+      console.log('redirecting to 1', path);
+      return NextResponse.redirect(path);
     }
     if (pathname === this.options.page) {
-      return NextResponse.redirect([origin, '/'].join(''));
+      const path = [origin, '/'].join('');
+      console.log('redirecting to 2', path);
+      return NextResponse.redirect(path);
     }
 
     return NextResponse.next();
@@ -145,6 +149,12 @@ export class NextProtect {
       });
 
       if (this.options.rewriteTo) {
+        console.log(
+          'rewriteTo',
+          this.options.rewriteTo?.startsWith('http')
+            ? this.options.rewriteTo
+            : [origin, this.options.rewriteTo].join('')
+        );
         return NextResponse.rewrite(
           this.options.rewriteTo?.startsWith('http')
             ? this.options.rewriteTo
@@ -152,6 +162,12 @@ export class NextProtect {
         );
       }
       if (this.options.redirectTo) {
+        console.log(
+          'redirectTo',
+          this.options.redirectTo?.startsWith('http')
+            ? this.options.redirectTo
+            : [origin, this.options.redirectTo].join('')
+        );
         return NextResponse.redirect(
           this.options.redirectTo?.startsWith('http')
             ? this.options.redirectTo
@@ -159,8 +175,12 @@ export class NextProtect {
         );
       }
 
+      console.log('redirecting to 3', origin);
+
       return NextResponse.redirect(origin);
     }
+
+    console.log('redirecting to 4', `${origin}?error=Invalid`);
 
     return NextResponse.redirect(`${origin}?error=Invalid`);
   }
