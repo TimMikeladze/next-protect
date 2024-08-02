@@ -1,7 +1,7 @@
 {
   "name": "next-protect",
   "description": "Protect your Next.js app with a password. A drop-in solution to keep your deployments protected with a basic password system. Support App Router, Middleware, Edge Runtime, and SSR out of the box.",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "author": "Tim Mikeladze <tim.mikeladze@gmail.com>",
   "license": "MIT",
   "keywords": [
