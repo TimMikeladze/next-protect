@@ -17,7 +17,10 @@ export const useNextProtect = (props: NextProtectHookProps) => {
       return;
     }
     if (props.isProtected === undefined) {
-      fetch(props.api || defaultNextProtectEndpoint)
+      fetch(props.api || defaultNextProtectEndpoint, {
+        method: 'GET',
+        cache: 'no-store',
+      })
         .then((res) => res.json())
         .then((data) => {
           setIsProtected(data.isProtected);

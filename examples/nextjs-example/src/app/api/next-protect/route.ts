@@ -4,3 +4,5 @@ import { np } from '.';
 export const POST = (req: NextRequest) => np.POST(req);
 
 export const GET = (req: NextRequest) => np.GET(req);
+
+export const dynamic = 'force-dynamic';
