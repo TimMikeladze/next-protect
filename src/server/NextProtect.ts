@@ -77,6 +77,7 @@ export class NextProtect {
         return NextResponse.next();
       }
       const path = [origin, this.options.page].join('');
+      console.log((req as NextRequest).nextUrl);
       console.log('redirecting to 1', path);
       return NextResponse.redirect(path);
     }
