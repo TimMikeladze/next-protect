@@ -174,7 +174,7 @@ export const np = new NextProtect({
 });
 ```
 
-### ⌨Custom API endpoint
+### Custom API endpoint
 
 By default, the `NextProtect` component will use the `/api/next-protect` endpoint to check if the user is authenticated. You can customize this endpoint by passing the `api` prop to the `NextProtect` component.
 
