@@ -15,11 +15,11 @@ Protect your Next.js app with a password. A drop-in solution to keep your deploy
 ## 📡 Install
 
 ```console
-npm install next-flag
+npm install next-protect
 
-yarn add next-flag
+yarn add next-protect
 
-pnpm add next-flag
+pnpm add next-protect
 ```
 
 > 👋 Hello there! Follow me [@linesofcode](https://twitter.com/linesofcode) or visit [linesofcode.dev](https://linesofcode.dev) for more cool projects like this one.
@@ -34,7 +34,7 @@ Next we need to instantiate the `NextProtect` class. This instance provides the 
 /* src/app/api/next-protect/index.ts */
 import { NextProtect } from 'next-protect/server';
 
-export const np = new NextProtect({});
+export const np = new NextProtect();
 ```
 
 Now we need to expose a `POST` route to our Next.js app. Create a new file `src/app/api/next-protect/route.ts` and export the `POST` method.
