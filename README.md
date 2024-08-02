@@ -147,7 +147,7 @@ const Page = () => (
   <NextProtect
     slotProps={{
       passwordInput: {
-        placeholder: 'The password is password', 
+        placeholder: 'The password is password',
       },
     }}
     header={<h1>Custom Header</h1>}
