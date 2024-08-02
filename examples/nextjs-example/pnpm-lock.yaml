@@ -12,8 +12,8 @@ importers:
         specifier: 14.2.5
         version: 14.2.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       next-protect:
-        specifier: ^1.1.0
-        version: 1.1.0(next@14.2.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^1.2.0
+        version: 1.2.0(next@14.2.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react:
         specifier: ^18
         version: 18.3.1
@@ -142,8 +142,8 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
-  next-protect@1.1.0:
-    resolution: {integrity: sha512-1MKDIZETqvYpLzYr4Fjqjwj/no33azCXU7ykjRKKgHJknTEPZbYHe/8jTA6hQ5By3vs73SkpfQRj2G364iG8Gw==}
+  next-protect@1.2.0:
+    resolution: {integrity: sha512-urMJiUftrcJfa1yh0XcBIAb7e0fMjscDThHXx/1G6v5Xv8QsoMeYPPzAmh88dRZ8KecN6RpIPBJya+ezn9DvZw==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       next: '>=13'
@@ -294,7 +294,7 @@ snapshots:
 
   nanoid@3.3.7: {}
 
-  next-protect@1.1.0(next@14.2.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  next-protect@1.2.0(next@14.2.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       jose: 5.6.3
       next: 14.2.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
